@@ -39,11 +39,11 @@ es_wifi_conf.h , es_wifi_io.h , flash.h , watchdogkicker.h 4개 파일은 원래
 main.h , stm32l4xx_hal_conf.h , stm32l4xx_it.h  3개의 파일은 해당 프로젝트의 .ioc 파일을 codegen하면 업데이트되는 헤더파일이다.
 demo project에서 빌드 할 때 이 header file을을 include 하여 빌드를 해야 하기 때문에,  demo project의 inclue path에 aws_demos\Proj_ForHwCfgCodeGen\Core\Inc 를 추가해두었다.
 
-aws_demos\Proj_ForHwCfgCodeGen\Core\Inc 경로안에 있는 .c파일들이 여러개 있는데
+aws_demos\Proj_ForHwCfgCodeGen\Core\Src 경로안에 있는 .c파일들이 여러개 있는데
 main.c , stm32l4xx_hal_msp.c  , stm32l4_xx_it.c 이 3개의 파일을 demo project에서 가져다가 사용한다.
 이 3개 파일 외에 다른 파일들도 .ioc에 의해 code gen이 되지만 이런저런 이유로 demo project에서 가져다가 사용하지는 않는다.
 ex) stm32l4xx_hal_timebase_tim.c 파일의 경우 .ioc 파일에 의해서 generate 되지만 demo project에서는 활용되지않는다. 
-demo project에서는 aws_demos\Src 폴더 안에 있는 stm32l4xx_hal_timebase_tim.c 를 빌드에 사용한다.
+    demo project에서는 aws_demos\Src 폴더 안에 있는 stm32l4xx_hal_timebase_tim.c 를 빌드에 사용한다.
 
 헷갈릴 수 있는데 다시 정리하면
 원래 홈페이지에서 다운로드 받은 원본프로젝트 압축을 풀어보면 아래와 같은 2개의 폴더가 존재하고
@@ -60,37 +60,4 @@ asw_demos/Src  =>    aws_demos\Proj_ForHwCfgCodeGen\Core\Src
 에 있는걸 가져와서 빌드하도록 구성해놨다는 거다.
 ppt 그림으로 좀 더 이해하기 쉽게 그려서 업로드하겠다.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**참고사항** : 
-aws_demos폴더 안에 Proj_ForHwCfgCodeGen 폴더가 들어있는데
-
-
-
-
+프로젝트구조설명.pptx <- 해당 파일 
